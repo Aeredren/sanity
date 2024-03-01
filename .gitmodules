@@ -1,0 +1,9 @@
+[submodule "git-submodules/bash-sensible"]
+	path = git-submodules/bash-sensible
+	url = https://github.com/mrzool/bash-sensible.git
+[submodule "git-submodules/tmux-sensible"]
+	path = git-submodules/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible.git
+[submodule "git-submodules/vim-sensible"]
+	path = git-submodules/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git

@@ -1,0 +1,30 @@
+# inputrc
+
+# VIM mode
+
+set editing-mode vi
+set show-mode-in-prompt on
+$if term=linux
+	set vi-ins-mode-string [I] \1\e[?0c\2
+	set vi-cmd-mode-string [N] \1\e[?8c\2
+$else
+	set vi-ins-mode-string "[I]"
+	set vi-cmd-mode-string "[N]"
+$endif
+
+# clever history search for VIM mode
+set editing-mode vi
+$if mode=vi
+set keymap vi-command
+
+# these are for vi-command mode
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+j: history-search-forward
+k: history-search-backward
+set keymap vi-insert
+
+# these are for vi-insert mode
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+$endif

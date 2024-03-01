@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Copyright (C) by Aeredren
+#
+# WORK IN PROGRESS ! Not usable at all
+#
+# imavimuser - a script to configure Bash and Tmux with vim
+# keybinding + swapping Caps_Lock and Escape on the fly
+
+## SET
+# Check if config files are installed
+echo 'Including imavimuser.inputrc to ~/.inputrc'
+
+echo 'including imavimuser.tmux.conf to .tmux.conf'
+
+if xset q &>/dev/null ; then
+	echo 'Swapping Caps and Escape with setxkbmap'
+	setxkbmap -option caps:swapescape
+fi
+
+echo 'Root privileges required to swap Caps and Escape in TTY with loadkeys'
+su -c 'echo -e "keycode 1 = Caps_Lock\nkeycode 58 = Escape" | loadkeys - ' 
+
+echo 'All done. Do not forget to reload Bash and Tmux.'
+
+## UNSET
+echo 'Removing imavimuser.inputrc from ~/.inputrc'
+
+echo 'Removing imavimuser.tmux.conf from .tmux.conf'
+
+if xset q &>/dev/null ; then
+	echo 'Unswapping Caps and Escape with setxkbmap'
+	setxkbmap -option caps:capslock
+fi
+
+echo 'Root privileges required to unswap Caps and Escape in TTY with loadkeys'
+su -c 'echo -e "keycode 1 = Escape\nkeycode 58 = Caps_Lock" | loadkeys - ' 
