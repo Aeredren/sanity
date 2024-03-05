@@ -28,24 +28,20 @@ sanity.sh.
 ## OPTIONS
 
 ```
--g, --global
-    Deploy configurations for all users with login capabilities and a HOME
-directory. (root needed)
+-g 
+    Deploy configurations for all users with login capabilities. (By default,
+    only deploy for the active user)
 
--l, --local
-    Default action, deploy configuration for the actual user.
-
--u, --uninstall
+-u
     Clean uninstall of all Sanity's related files
 
---no-aliases
-	Does not add short aliases to bashrc. If set, removes it.
+-n [aliases,prompt,zsh]
+	Does not add the specified features (a few aliases, a colourfull prompt,
+    zsh-like tab completion)
 
---no-prompt
-	Does not add colorfull prompt to bashrc. If set, removes it.
-
---no-zsh
-	Does not add zsh-like completion to bashrc. If set, removes it.
+-h
+    Display a summary of available options
+    
 ```
 
 ## IMAVIMUSER
@@ -57,10 +53,10 @@ key on Xorg **and** TTY.
 Its options are :
 
 ```
--g, --global
-	Set Vimmode for all users (root needed)
+-g
+	Set Vimmode for all users
 
---no-remap
+-n
 	Do not swap Escape and Caps_Lock
 ```
 
@@ -69,6 +65,7 @@ and revert the config back to "normal" mode.
 
 ## FILES
 
+TO-DO
 ```
 /run/local/bin/imavimuser
 /run/local/bin/imanemacsuser
