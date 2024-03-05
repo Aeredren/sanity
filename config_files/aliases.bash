@@ -1,12 +1,12 @@
 #!/bin/bash
 
-alias ls ='ls -color=auto'
-alias ll ='ls -color=auto -l'
-alias la ='ls -color=auto -la'
+alias ls='ls --color=auto -h'
+alias ll='ls --color=auto -hl'
+alias la='ls --color=auto -hla'
 
-alias grep='grep -color=auto'
-alias egrep='egrep -color=auto'
-alias fgrep='fgrep -color=auto'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
 
 alias c='clear'
 alias x='exit'

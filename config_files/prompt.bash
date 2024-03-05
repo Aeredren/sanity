@@ -19,7 +19,7 @@ if [ -x "$(command -v tput)" ]; then
 	BR_MAGENTA="$(tput setaf 13)"
 	BR_CYAN="$(tput setaf 14)"
 	BR_WHITE="$(tput setaf 15)"
-	REST="$(tput sgr0)"
+	RESET="$(tput sgr0)"
 fi
 
 ## Prompt
