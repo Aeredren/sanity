@@ -4,11 +4,12 @@ The following Readme is a Roadmap and not the actual features.
 
 # Sanity
 
-Auto-deploy sane, community-agreed, default configs for Bash, Tmux and Vim.
+sanity.sh \[-g|-u\] \[-n aliases,prompt,zsh\] \[WORKING DIRECTORY\]
 
-Sanity is made of a main script, 3 bash config files and git-submodules for
-mrzool's bash-sensible, tmux-plugins' tmux-sensible, and tpope's sensible.vim
-(See FILES). 
+Set sensible config files for Bash, Tmux and Vim
+
+Init the git-submodules for bash.sensible, tmux.sensible and vim.sensible, run
+sanity.sh and let the magic happened.
 
 Its use case is configuring offline shared linux computers like the one we
 uses on labs and testing environment. Your coworkers and yourself won't need to
